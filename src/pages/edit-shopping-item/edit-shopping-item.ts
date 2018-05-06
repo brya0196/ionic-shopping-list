@@ -24,7 +24,6 @@ export class EditShoppingItemPage {
   }
 
   ionViewDidLoad() {
-    console.log(this.navParams.get('item'));
   }
 
   saveItem(item: Item) {
