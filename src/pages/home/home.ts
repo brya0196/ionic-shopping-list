@@ -11,7 +11,7 @@ import { Item } from '../../models/item/item.model';
 })
 export class HomePage {
 
-  shoppinglist$: Observable<Item[]>;
+  shoppinglist$: Observable<any[]>;
 
   constructor(public navCtrl: NavController, private shopping: ShoppingListService) {
     this.shoppinglist$ = this.shopping
