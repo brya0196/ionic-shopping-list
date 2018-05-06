@@ -18,10 +18,10 @@ export class HomePage {
       .getShoppinglist() // db list
       .snapshotChanges() //key and values
       .map(changes => {
-      return changes.map(c => ({
-        key: c.payload.key, ...c.payload.val()
-      }))
-    })
+        return changes.map(c => ({
+          key: c.payload.key, ...c.payload.val()
+        }))
+      });
   }
 
 }
