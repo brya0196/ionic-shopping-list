@@ -23,7 +23,7 @@ export class AddShoppingItemPage {
     price: undefined
   }
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private shopping: ShoppingListService) {
   }
 
   ionViewDidLoad() {
@@ -31,7 +31,9 @@ export class AddShoppingItemPage {
   }
 
   addItem(item: Item) {
-
+    this.shopping.addItem(item).then(ref => {
+      this.navCtrl.setRoot("HomePage", { key: ref.key })
+    });
   }
 
 }

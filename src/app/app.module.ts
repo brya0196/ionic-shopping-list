@@ -27,8 +27,8 @@ import { ShoppingListService } from '../services/shopping-list/shopping-list.ser
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ShoppingListService
+    ShoppingListService,
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
 export class AppModule {}
